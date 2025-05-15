@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Progress Tracking</title>
+ <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="progress-page">
+ <header>
+  <nav>
+   <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="workouts.html">Workouts</a></li>
+    <li><a href="nutrition.html">Nutrition</a></li>
+    <li><a href="progress.html">Progress</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+   </ul>
+  </nav>
+  <div class="banner">
+   <h1>Track Your Progress</h1>
+   <p>Monitor your fitness journey and celebrate your achievements</p>
+  </div>
+ </header>
+ <main class="main-content">
+  <section class="progress-section">
+   <h2>Progress Tracking</h2>
+   <div class="progress-container">
+    <div class="progress-form">
+     <h3>Log Your Progress</h3>
+     <form id="progressForm">
+      <div class="form-group">
+       <label for="date">Date:</label>
+       <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+       <label for="weight">Weight (kg):</label>
+       <input type="number" id="weight" name="weight" step="0.1" required>
+      </div>
+      <div class="form-group">
+       <label for="activity">Today's Activities:</label>
+       <textarea id="activity" name="activity" required></textarea>
+      </div>
+      <div class="form-group">
+       <label for="meals">Meals:</label>
+       <textarea id="meals" name="meals" required></textarea>
+      </div>
+      <button type="submit">Save Progress</button>
+     </form>
+    </div>
+    <div class="progress-chart">
+     <h3>Your Progress</h3>
+     <div id="progressChart">
+      <!-- Chart will be rendered here by JavaScript -->
+      <p class="chart-placeholder">Your progress data will be displayed here once you start logging.</p>
+     </div>
+    </div>
+   </div>
+  </section>
+ </main>
+ <footer>
+  <p>&copy; 2025 Health & Fitness. All rights reserved.</p>
+  <p>Follow us on <a href="#">Twitter</a> | <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+ </footer>
+ <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<div class="workouts-page">
+  <section class="workout-banner">
+    <h1>Find Your Perfect Workout Plan</h1>
+    <p>
+      Choose from our curated collection of workout plans designed for all
+      fitness levels
+    </p>
+  </section>
+
+  <section class="workout-categories">
+    <h2>Workout Categories</h2>
+    <div class="category-grid">
+      <div class="category-card">
+        <h3>Weight Loss</h3>
+        <p>High-intensity workouts to burn calories and shed pounds</p>
+        <a href="/workouts/weight-loss" class="btn">View Plans</a>
+      </div>
+      <div class="category-card">
+        <h3>Muscle Gain</h3>
+        <p>Strength training routines to build muscle mass</p>
+        <a href="/workouts/muscle-gain" class="btn">View Plans</a>
+      </div>
+      <div class="category-card">
+        <h3>General Fitness</h3>
+        <p>Balanced workouts for overall health and wellness</p>
+        <a href="/workouts/general-fitness" class="btn">View Plans</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-workouts">
+    <h2>Featured Workouts</h2>
+    <div class="workout-grid">
+      <% if (typeof workouts !== 'undefined' && workouts.length > 0) { %> <%
+      workouts.forEach(workout => { %>
+      <div class="workout-card">
+        <h3><%= workout.title %></h3>
+        <p><%= workout.description %></p>
+        <div class="workout-meta">
+          <span>Duration: <%= workout.duration %></span>
+          <span>Level: <%= workout.level %></span>
+        </div>
+        <a href="/workouts/<%= workout.id %>" class="btn">Start Workout</a>
+      </div>
+      <% }); %> <% } else { %>
+      <p>No workouts available at the moment. Please check back later.</p>
+      <% } %>
+    </div>
+  </section>
+</div>

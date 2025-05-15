@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Workouts</title>
+ <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="workouts-page">
+ <header>
+  <nav>
+   <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="workouts.html">Workouts</a></li>
+    <li><a href="nutrition.html">Nutrition</a></li>
+    <li><a href="progress.html">Progress</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+   </ul>
+  </nav>
+  <div class="banner">
+   <h1>Workout Programs</h1>
+   <p>Choose from our variety of expertly designed workout programs</p>
+  </div>
+ </header>
+ <main>
+  <section class="workouts-section">
+   <h2>Available Workouts</h2>
+   <div class="workout-categories">
+    <div class="category" onclick="showDetails('strength')">
+     <h3>Strength Training</h3>
+     <p>Build muscle and increase strength with our comprehensive weight training programs.</p>
+     <ul>
+      <li>Full body workouts</li>
+      <li>Split routines</li>
+      <li>Progressive overload plans</li>
+     </ul>
+     <button class="details-btn">View Details</button>
+    </div>
+    <div class="category" onclick="showDetails('cardio')">
+     <h3>Cardio Workouts</h3>
+     <p>Improve your cardiovascular health and endurance with varied cardio exercises.</p>
+     <ul>
+      <li>HIIT workouts</li>
+      <li>Steady-state cardio</li>
+      <li>Interval training</li>
+     </ul>
+     <button class="details-btn">View Details</button>
+    </div>
+    <div class="category" onclick="showDetails('flexibility')">
+     <h3>Flexibility & Mobility</h3>
+     <p>Enhance your flexibility and prevent injuries with targeted stretching routines.</p>
+     <ul>
+      <li>Dynamic stretching</li>
+      <li>Yoga flows</li>
+      <li>Mobility drills</li>
+     </ul>
+     <button class="details-btn">View Details</button>
+    </div>
+   </div>
+  </section>
+
+  <!-- Modal for workout details -->
+  <div id="strengthDetails" class="modal">
+   <div class="modal-content">
+    <span class="close" onclick="closeModal('strengthDetails')">&times;</span>
+    <h2>Strength Training Details</h2>
+    <div class="workout-details">
+     <h3>Program Overview</h3>
+     <p>Our strength training program is designed to help you build muscle, increase strength, and improve overall fitness.</p>
+     <h4>Weekly Schedule</h4>
+     <ul>
+      <li>Monday: Upper Body Push</li>
+      <li>Tuesday: Lower Body</li>
+      <li>Wednesday: Rest/Active Recovery</li>
+      <li>Thursday: Upper Body Pull</li>
+      <li>Friday: Full Body</li>
+      <li>Saturday/Sunday: Rest</li>
+     </ul>
+    </div>
+   </div>
+  </div>
+
+  <div id="cardioDetails" class="modal">
+   <div class="modal-content">
+    <span class="close" onclick="closeModal('cardioDetails')">&times;</span>
+    <h2>Cardio Workout Details</h2>
+    <div class="workout-details">
+     <h3>Program Overview</h3>
+     <p>Our cardio program is designed to improve your cardiovascular health, endurance, and help with weight management.</p>
+     <h4>Weekly Schedule</h4>
+     <ul>
+      <li>Monday: HIIT Training</li>
+      <li>Tuesday: Steady State Cardio</li>
+      <li>Wednesday: Rest</li>
+      <li>Thursday: Interval Training</li>
+      <li>Friday: Mixed Cardio</li>
+      <li>Saturday/Sunday: Light Activity</li>
+     </ul>
+    </div>
+   </div>
+  </div>
+
+  <div id="flexibilityDetails" class="modal">
+   <div class="modal-content">
+    <span class="close" onclick="closeModal('flexibilityDetails')">&times;</span>
+    <h2>Flexibility & Mobility Details</h2>
+    <div class="workout-details">
+     <h3>Program Overview</h3>
+     <p>Our flexibility program focuses on improving range of motion, preventing injuries, and enhancing recovery.</p>
+     <h4>Weekly Schedule</h4>
+     <ul>
+      <li>Monday: Dynamic Stretching</li>
+      <li>Tuesday: Yoga Flow</li>
+      <li>Wednesday: Mobility Work</li>
+      <li>Thursday: Active Recovery</li>
+      <li>Friday: Mixed Session</li>
+      <li>Saturday/Sunday: Light Stretching</li>
+     </ul>
+    </div>
+   </div>
+  </div>
+ </main>
+ <footer>
+  <p>&copy; 2025 Health & Fitness. All rights reserved.</p>
+  <p>Follow us on <a href="#">Twitter</a> | <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+ </footer>
+ <script src="js/scripts.js"></script>
+</body>
+</html>

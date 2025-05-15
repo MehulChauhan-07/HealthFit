@@ -1,0 +1,64 @@
+<main>
+  <section class="login-section">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <p class="register-link">
+      Don't have an account? <a href="/register">Register here</a>
+    </p>
+  </section>
+</main>
+
+<script>
+  document
+    .getElementById("loginForm")
+    .addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const formData = {
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+      };
+
+      try {
+        const response = await fetch("/api/users/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+          credentials: "include",
+        });
+
+        const data = await response.json();
+        console.log("Login response:", data); // Debug log
+
+        if (response.ok) {
+          // Successful login
+          window.location.href = "/dashboard";
+        } else {
+          // Show error message from server
+          alert(data.message || "Login failed. Please check your credentials.");
+        }
+      } catch (error) {
+        console.error("Login error:", error);
+        // Only show connection error if we can't reach the server at all
+        // if (error.name === "TypeError" && error.message === "Failed to fetch") {
+        //   alert(
+        //     "Unable to connect to the server. Please check your internet connection."
+        //   );
+        // } else {
+        //   alert("Login failed. Please try again.");
+        // }
+      }
+    });
+</script>

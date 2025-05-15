@@ -1,0 +1,44 @@
+<nav class="main-nav">
+  <div class="nav-container">
+    <a href="/" class="logo">Health & Fitness</a>
+    <ul class="nav-links">
+      <li><a href="/" class="<%= path === '/' ? 'active' : '' %>">Home</a></li>
+      <li>
+        <a href="/workouts" class="<%= path === '/workouts' ? 'active' : '' %>"
+          >Workouts</a
+        >
+      </li>
+      <li>
+        <a
+          href="/nutrition"
+          class="<%= path === '/nutrition' ? 'active' : '' %>"
+          >Nutrition</a
+        >
+      </li>
+      <li>
+        <a href="/progress" class="<%= path === '/progress' ? 'active' : '' %>"
+          >Progress</a
+        >
+      </li>
+      <li>
+        <a href="/about" class="<%= path === '/about' ? 'active' : '' %>"
+          >About Us</a
+        >
+      </li>
+      <li>
+        <a href="/contact" class="<%= path === '/contact' ? 'active' : '' %>"
+          >Contact</a
+        >
+      </li>
+    </ul>
+    <div class="nav-auth">
+      <% if (typeof user !== 'undefined' && user) { %>
+      <a href="/profile" class="btn btn-profile">Profile</a>
+      <a href="/logout" class="btn btn-logout">Logout</a>
+      <% } else { %>
+      <a href="/login" class="btn btn-login">Login</a>
+      <a href="/register" class="btn btn-register">Register</a>
+      <% } %>
+    </div>
+  </div>
+</nav>

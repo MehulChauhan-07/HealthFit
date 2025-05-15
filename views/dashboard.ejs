@@ -1,0 +1,118 @@
+<main>
+  <section class="dashboard-section">
+    <h2>Welcome, <%= user.fullName %></h2>
+
+    <div class="dashboard-grid">
+      <!-- Quick Stats -->
+      <div class="stats-card">
+        <h3>Your Progress</h3>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-label">Workouts Completed</span>
+            <span class="stat-value">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Current Streak</span>
+            <span class="stat-value">0 days</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Achievements</span>
+            <span class="stat-value">0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Today's Workout -->
+      <div class="workout-card">
+        <h3>Today's Workout</h3>
+        <div class="workout-content">
+          <p>No workout assigned for today.</p>
+          <a href="/workouts" class="btn">Browse Workouts</a>
+        </div>
+      </div>
+
+      <!-- Nutrition Plan -->
+      <div class="nutrition-card">
+        <h3>Today's Nutrition</h3>
+        <div class="nutrition-content">
+          <p>No nutrition plan assigned.</p>
+          <a href="/nutrition" class="btn">View Nutrition Plans</a>
+        </div>
+      </div>
+
+      <!-- Recent Progress -->
+      <div class="progress-card">
+        <h3>Recent Progress</h3>
+        <div class="progress-content">
+          <p>No progress recorded yet.</p>
+          <a href="/progress" class="btn">Track Progress</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<style>
+  .dashboard-section {
+    padding: 2rem;
+  }
+
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .stats-card,
+  .workout-card,
+  .nutrition-card,
+  .progress-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .stat-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+  }
+
+  .stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+  }
+
+  .btn:hover {
+    background: #0056b3;
+  }
+</style>

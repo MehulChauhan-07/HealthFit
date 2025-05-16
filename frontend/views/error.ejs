@@ -1,0 +1,45 @@
+<section class="error-section">
+    <h1>Oops! Something went wrong</h1>
+    <% if (process.env.NODE_ENV === 'development' && error) { %>
+        <div class="error-details">
+            <h2>Error Details:</h2>
+            <pre><%= error.stack %></pre>
+        </div>
+    <% } else { %>
+        <p>We apologize for the inconvenience. Please try again later or contact support if the problem persists.</p>
+    <% } %>
+    <div class="error-actions">
+        <a href="/" class="btn btn-primary">Return to Home</a>
+        <a href="/contact" class="btn btn-secondary">Contact Support</a>
+    </div>
+</section>
+
+<style>
+.error-section {
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.error-details {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.error-details pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.error-actions {
+    margin-top: 2rem;
+}
+
+.error-actions .btn {
+    margin: 0 0.5rem;
+}
+</style> 

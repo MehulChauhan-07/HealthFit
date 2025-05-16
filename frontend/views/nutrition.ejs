@@ -1,0 +1,80 @@
+<section class="nutrition-section">
+    <h1>Nutrition Guidance</h1>
+    <p class="section-description">Get expert advice on diet and nutrition to complement your fitness journey</p>
+
+    <div class="nutrition-grid">
+        <div class="nutrition-card">
+            <h3>Meal Plans</h3>
+            <p>Customized meal plans based on your goals and dietary preferences</p>
+            <a href="/nutrition/meal-plans" class="btn btn-primary">View Plans</a>
+        </div>
+
+        <div class="nutrition-card">
+            <h3>Nutrition Calculator</h3>
+            <p>Calculate your daily caloric needs and macronutrient requirements</p>
+            <a href="/nutrition/calculator" class="btn btn-primary">Calculate</a>
+        </div>
+
+        <div class="nutrition-card">
+            <h3>Recipe Database</h3>
+            <p>Access our collection of healthy and nutritious recipes</p>
+            <a href="/nutrition/recipes" class="btn btn-primary">Browse Recipes</a>
+        </div>
+    </div>
+</section>
+
+<style>
+.nutrition-section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.nutrition-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.nutrition-card h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.nutrition-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+</style> 

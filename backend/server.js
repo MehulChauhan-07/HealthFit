@@ -40,7 +40,7 @@ app.use(
 
 // Set EJS as the view engine
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "../frontend/views"));
 
 // Configure express-ejs-layouts
 app.use(expressLayouts);
@@ -49,10 +49,10 @@ app.set("layout extractScripts", true);
 app.set("layout extractStyles", true);
 
 // Serve static files
-app.use(express.static(path.join(__dirname, "public")));
-app.use("/css", express.static(path.join(__dirname, "public/css")));
-app.use("/js", express.static(path.join(__dirname, "public/js")));
-app.use("/images", express.static(path.join(__dirname, "public/images")));
+app.use(express.static(path.join(__dirname, "../frontend")));
+app.use("/css", express.static(path.join(__dirname, "../frontend/css")));
+app.use("/js", express.static(path.join(__dirname, "../frontend/js")));
+app.use("/images", express.static(path.join(__dirname, "../frontend/images")));
 
 // Global variables middleware
 app.use((req, res, next) => {
@@ -145,6 +145,18 @@ app.get("/contact", (req, res) => {
     title: "Contact",
     description: "Get in touch with us",
     bodyClass: "contact-page",
+  });
+});
+
+app.get("/profile", (req, res) => {
+  if (!req.session.user) {
+    return res.redirect("/login");
+  }
+  res.render("profile", {
+    title: "Profile",
+    description: "Your personal profile",
+    bodyClass: "profile-page",
+    user: req.session.user,
   });
 });
 

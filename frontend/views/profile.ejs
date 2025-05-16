@@ -1,0 +1,19 @@
+<section class="profile-section">
+    <h2>User Profile</h2>
+    <div id="profileInfo">
+        <% if (user) { %>
+            <div class="user-info">
+                <h3><%= user.name %></h3>
+                <p>Email: <%= user.email %></p>
+                <p>Member since: <%= new Date(user.createdAt).toLocaleDateString() %></p>
+            </div>
+        <% } else { %>
+            <p>Please log in to view your profile.</p>
+        <% } %>
+    </div>
+    <div id="userPlans">
+        <!-- Selected plans and progress will be shown here -->
+    </div>
+</section>
+
+<script src="/js/profile.js"></script> 

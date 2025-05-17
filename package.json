@@ -2,10 +2,10 @@
   "name": "health-fitness-website",
   "version": "1.0.0",
   "description": "A comprehensive health and fitness platform",
-  "main": "backend/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon backend/server.js",
-    "dev": "nodemon backend/server.js"
+    "start": "nodemon server.js",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
